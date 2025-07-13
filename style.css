@@ -1,0 +1,21 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.wavebt {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.txt {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 15rem;
+}
