@@ -44,6 +44,21 @@ body {
   width: 100%;
   justify-content: center;
 }
+.input-forms {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+.icon-right {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: gray;
+  pointer-events: none;
+}
 
 .checkbox {
   position: relative;
