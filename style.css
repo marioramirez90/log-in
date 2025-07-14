@@ -31,6 +31,7 @@ body {
 }
 
 .forms {
+  margin-top: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,6 +45,12 @@ body {
   width: 100%;
   justify-content: center;
 }
+.forms input:hover {
+  transform: scale(1.05);
+  border-color: #007bff;
+  outline: none;
+  transition: 0.4s ease-in;
+}
 .input-forms {
   display: flex;
   flex-direction: column;
@@ -51,6 +58,7 @@ body {
   position: relative;
   width: 100%;
 }
+
 .icon-right {
   position: absolute;
   top: 50%;
@@ -66,7 +74,7 @@ body {
   align-items: center;
   gap: 0.2rem;
   font-size: 9px;
-  left: -2rem;
+  left: -1rem;
   margin-bottom: 1rem;
 }
 
@@ -91,6 +99,17 @@ body {
   color: #0056b3;
   transition: 0.7s ease;
   cursor: pointer;
+}
+.login-text {
+  display: flex;
+  font-size: 10px;
+  justify-self: center;
+  gap: 0.2rem;
+}
+.login-text a {
+  text-decoration: none;
+  color: #0056b3;
+  font-size: 10px;
 }
 .btn:hover {
   color: white;
