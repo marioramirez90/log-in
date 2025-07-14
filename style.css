@@ -115,3 +115,18 @@ body {
   color: white;
   background-color: #0056b3;
 }
+
+.checkbox-login {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: 9px;
+  left: -1rem;
+  margin-bottom: 1rem;
+}
+.checkbox-login a {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 9px;
+  margin-left: 2rem;
+}
