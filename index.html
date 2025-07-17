@@ -23,7 +23,7 @@
         </div>
         <div class="forms">
             <div class="input-forms">
-                <input type="text" placeholder="Username">
+                <input type="text" id="username" placeholder="Username">
                 <i class="fa-solid fa-user icon-right"></i>
             </div>
             <div class="input-forms">
@@ -31,23 +31,23 @@
                 <i class="fa-solid fa-envelope icon-right"></i>
             </div>
             <div class="input-forms">
-                <input type="password" placeholder="Password" required />
+                <input type="password" id="password" placeholder="Password" required />
                 <i class="fa-solid fa-lock icon-right"></i>
             </div>
             <div class="input-forms">
-                <input type="password" placeholder="Confirm Password">
+                <input type="password" id="confirmPassword" placeholder="Confirm Password">
                 <i class="fa-solid fa-lock icon-right"></i>
             </div>
         </div>
 
         <div class="checkbox">
-            <input type="checkbox" name="" id="id">
+            <input type="checkbox" name="" id="terms">
             <label for="id">I agree to the terms & conditions</label>
 
         </div>
 
         <div class="butten">
-            <button class="btn">Register</button>
+            <button class="btn" onclick="register()">Register</button>
             <p class="login-text">Already have an account?<a href="login.html">Log In</a></p>
         </div>
 
