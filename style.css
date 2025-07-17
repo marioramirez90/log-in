@@ -29,7 +29,13 @@ body {
   justify-items: center;
   width: 100%;
 }
-
+.titel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
 .forms {
   margin-top: 0.5rem;
   display: flex;
