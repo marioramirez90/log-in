@@ -20,24 +20,42 @@
     <div class="container">
         <div class="titel">
             <h1>Sign In</h1>
+            <div id="errorBox" class="error-box hidden"></div>
         </div>
+        <div class="gender-select">
+            <label><input type="radio" name="gender" value="male">Man</label>
+            <label><input type="radio" name="gender" value="male">Femal</label>
+            <label><input type="radio" name="gender" value="male">Divers</label>
+
+        </div>
+
         <div class="forms">
             <div class="input-forms">
                 <input type="text" id="username" placeholder="Username">
                 <i class="fa-solid fa-user icon-right"></i>
+
             </div>
+            <div class="hint" id="hint-username"></div>
+
             <div class="input-forms">
                 <input type="email" id="email" placeholder="Email">
                 <i class="fa-solid fa-envelope icon-right"></i>
             </div>
+            <div class="hint" id="hint-email"></div>
+
             <div class="input-forms">
                 <input type="password" id="password" placeholder="Password" required />
                 <i class="fa-solid fa-lock icon-right"></i>
             </div>
+            <div class="hint" id="hint-password"></div>
+
             <div class="input-forms">
                 <input type="password" id="confirmPassword" placeholder="Confirm Password">
                 <i class="fa-solid fa-lock icon-right"></i>
             </div>
+
+            <div class="hint" id="hint-confirmPassword"></div>
+
         </div>
 
         <div class="checkbox">
