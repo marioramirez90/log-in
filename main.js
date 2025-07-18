@@ -1,3 +1,6 @@
+//---------Sgin in----------
+//JS für die Sign in
+
 // Hinweis feld
 function showHint(inputId, message) {
   const allHints = document.querySelectorAll(".hint");
@@ -25,3 +28,11 @@ document.getElementById("password").addEventListener("focus", () => {
 document.getElementById("confirmPassword").addEventListener("focus", () => {
   showHint("confirmPassword", "Please confirm your password.");
 });
+
+// registrieren Funktion
+function register() {
+  const gender = document.querySelector('input[name="gender"]:checked');
+  const username = document.getElementById("username");
+  const email = document.getElementById("email");
+  const password = document.getElementById("password");
+}
