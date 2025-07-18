@@ -186,3 +186,11 @@ input.error {
 .hint.visible {
   display: block;
 }
+
+.error-box {
+  background-color: #ffdddd;
+  border-left: 4px solid #f44336;
+  padding: 10px;
+  margin-bottom: 15px;
+  display: none;
+}
