@@ -57,6 +57,11 @@ body {
   outline: none;
   transition: 0.4s ease-in;
 }
+.forms input:focus {
+  border-color: #ff0000;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
 
 .input-forms {
   display: flex;
@@ -168,6 +173,9 @@ body {
   display: none;
 }
 
+input.error {
+  border: 2px solid red;
+}
 .hint {
   font-size: 0.6em;
   color: #f00202;
