@@ -111,50 +111,49 @@ function register() {
     errorBox.textContent = "Username already exists.";
     errorBox.style.display = "block";
     return;
-
-    if (emailExists) {
-      email.classList.add("error");
-      errorBox.textContent = "Email already exists.";
-      errorBox.style.display = "block";
-      return;
-    }
-
-    const newUser = {
-      username: username.value.trim(),
-      email: email.value.trim().toLowerCase(),
-      password: password.value,
-      gender: gender.value,
-    };
-
-    users.push(newUser);
-    localStorage.setItem("users", JSON.stringify(users));
   }
-  // POPUP
-  document.getElementById("popup").classList.remove("hidden");
-
-  function closePopup() {
-    document.getElementById("popup").classList.add("hidden");
-
-    // Formular zurücksetzen
-    document.getElementById("username").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("password").value = "";
-    document.getElementById("confirmPassword").value = "";
-    document.getElementById("terms").checked = false;
-
-    const genderRadios = document.querySelectorAll('input[name="gender"]');
-    genderRadios.forEach((r) => (r.checked = false));
-
-    const hints = document.querySelectorAll(".hint");
-    hints.forEach((hint) => {
-      hint.classList.remove("visible");
-      hint.textContent = "";
-    });
-
-    document.getElementById("errorBox").style.display = "none";
-
-    [username, email, password, confirmPassword].forEach((el) =>
-      el.classList.remove("error")
-    );
+  if (emailExists) {
+    email.classList.add("error");
+    errorBox.textContent = "Email already exists.";
+    errorBox.style.display = "block";
+    return;
   }
+
+  const newUser = {
+    username: username.value.trim(),
+    email: email.value.trim().toLowerCase(),
+    password: password.value,
+    gender: gender.value,
+  };
+
+  users.push(newUser);
+  localStorage.setItem("users", JSON.stringify(users));
+}
+// POPUP
+document.getElementById("popup").classList.remove("hidden");
+
+function closePopup() {
+  document.getElementById("popup").classList.add("hidden");
+
+  // Formular zurücksetzen
+  document.getElementById("username").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("password").value = "";
+  document.getElementById("confirmPassword").value = "";
+  document.getElementById("terms").checked = false;
+
+  const genderRadios = document.querySelectorAll('input[name="gender"]');
+  genderRadios.forEach((r) => (r.checked = false));
+
+  const hints = document.querySelectorAll(".hint");
+  hints.forEach((hint) => {
+    hint.classList.remove("visible");
+    hint.textContent = "";
+  });
+
+  document.getElementById("errorBox").style.display = "none";
+
+  [username, email, password, confirmPassword].forEach((el) =>
+    el.classList.remove("error")
+  );
 }
