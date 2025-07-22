@@ -128,10 +128,10 @@ function register() {
 
   users.push(newUser);
   localStorage.setItem("users", JSON.stringify(users));
-}
-// POPUP
-document.getElementById("popup").classList.remove("hidden");
 
+  // POPUP
+  document.getElementById("popup").classList.remove("hidden");
+}
 function closePopup() {
   document.getElementById("popup").classList.add("hidden");
 
