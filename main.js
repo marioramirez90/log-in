@@ -36,3 +36,61 @@ function register() {
   const email = document.getElementById("email");
   const password = document.getElementById("password");
 }
+
+// Fehlerbox
+[username, email, password, confirmPassword].forEach((el) =>
+  el.classList.remove("error")
+);
+errorBox.style.display = "none";
+errorBox.textContent = "";
+
+let hasError = false;
+
+if (!username.value.trim()) {
+  username.classList.add("error");
+  hasError = true;
+}
+if (!email.value.trim()) {
+  email.classList.add("error");
+  hasError = true;
+}
+if (!password.value) {
+  password.classList.add("error");
+  hasError = true;
+}
+if (!confirmPassword.value) {
+  confirmPassword.classList.add("error");
+  hasError = true;
+}
+if (!gender) {
+  hasError = true;
+}
+if (!terms.checked) {
+  hasError = true;
+}
+
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if (email.value && !emailPattern.test(email.value.trim().toLowerCase())) {
+  email.classList.add("error");
+  errorBox.textContent = "Please enter a valid email address.";
+  errorBox.style.display = "block";
+  return;
+}
+
+if (
+  password.value &&
+  confirmPassword.value &&
+  password.value !== confirmPassword.value
+) {
+  password.classList.add("error");
+  confirmPassword.classList.add("error");
+  errorBox.textContent = "Passwords do not match.";
+  errorBox.style.display = "block";
+  return;
+}
+
+if (hasError) {
+  errorBox.textContent = "Please complete all required fields marked in red.";
+  errorBox.style.display = "block";
+  return;
+}
