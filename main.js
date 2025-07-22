@@ -101,15 +101,15 @@ let users = JSON.parse(localStorage.getItem("users")) || "[]";
 const usernameExists = users.some(
   (u) => username.toLowerCase() === username.value.trim().toLowerCase()
 );
-cosnt emailExists = users.some(
-    (u) => u.email === email.value.trim().toLowerCase()
+const emailExists = users.some(
+  (u) => u.email === email.value.trim().toLowerCase()
 );
 if (usernameExists) {
   username.classList.add("error");
   errorBox.textContent = "Username already exists.";
   errorBox.style.display = "block";
-  return;   
-    
+  return;
+
   if (emailExists) {
     email.classList.add("error");
     errorBox.textContent = "Email already exists.";
@@ -120,13 +120,10 @@ if (usernameExists) {
   const newUser = {
     username: username.value.trim(),
     email: email.value.trim().toLowerCase(),
-    password: password.value,           
+    password: password.value,
     gender: gender.value,
-  };    
+  };
 
   users.push(newUser);
   localStorage.setItem("users", JSON.stringify(users));
-
-
-  
 }
