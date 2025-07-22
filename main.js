@@ -127,3 +127,5 @@ if (usernameExists) {
   users.push(newUser);
   localStorage.setItem("users", JSON.stringify(users));
 }
+// POPUP
+Document.getElementById("popuo").classList.remove("hidden");
