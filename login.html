@@ -23,26 +23,26 @@
         </div>
         <div class="forms">
             <div class="input-forms">
-                <input type="text" placeholder="Username">
+                <input type="text" id="login-username" placeholder="Username">
                 <i class="fa-solid fa-user icon-right"></i>
             </div>
 
             <div class="input-forms">
-                <input type="password" placeholder="Password" required />
+                <input type="password" id="login-password" placeholder="Password" required />
                 <i class="fa-solid fa-lock icon-right"></i>
             </div>
 
 
         </div>
         <div class="checkbox-login">
-            <input type="checkbox" name="" id="id">
-            <label for="id">Remember me</label>
+            <input type="checkbox" id="remember-me" name="">
+            <label for="remember-me">Remember me</label>
             <a href="lostpassword.html">Forgot Password</a>
         </div>
 
 
         <div class="butten">
-            <button class="btn">Login</button>
+            <button class="btn" onclick="login()">Login</button>
             <p class="login-text">Dont have an acount?<a href="index.html">Sign up</a></p>
         </div>
 
