@@ -101,8 +101,9 @@ function register() {
   let users = JSON.parse(localStorage.getItem("users")) || [];
 
   const usernameExists = users.some(
-    (u) => username.toLowerCase() === username.value.trim().toLowerCase()
+    (u) => u.username.toLowerCase() === username.value.trim().toLowerCase()
   );
+
   const emailExists = users.some(
     (u) => u.email === email.value.trim().toLowerCase()
   );
@@ -156,4 +157,5 @@ function closePopup() {
   [username, email, password, confirmPassword].forEach((el) =>
     el.classList.remove("error")
   );
+  window.location.href = "login.html";
 }
