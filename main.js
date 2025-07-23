@@ -98,7 +98,7 @@ function register() {
 
   // localStorage
 
-  let users = JSON.parse(localStorage.getItem("users")) || "[]";
+  let users = JSON.parse(localStorage.getItem("users")) || [];
 
   const usernameExists = users.some(
     (u) => username.toLowerCase() === username.value.trim().toLowerCase()
