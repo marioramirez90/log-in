@@ -202,11 +202,13 @@ input.error {
   border: 2px solid red;
 }
 .hint {
+  background-color: #ffcccc;
   font-size: 0.6em;
   color: #f00202;
-
+  margin-top: 0;
   display: none;
-  border: 2px solid #f00202;
+  border: 1px solid #f00202;
+  padding: 0.4rem;
 }
 .hint.visible {
   display: block;
